@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Console Appender: Logs to the console -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %C.%M(%L): %msg%n%throwable"/>
+        </Console>
+
+        <!-- File Appender: Logs to a file -->
+        <File name="FileLogger" fileName="logs/app.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %C.%M(%L): %msg%n%throwable"/>
+        </File>
+
+        <!-- Remote Logging Appender (HTTP): Sends logs to a remote server -->
+        <!-- Uncomment and configure if using remote logging -->
+        <!--
+        <Http name="HttpLogger" url="http://remote-server/api/logs">
+            <JsonLayout compact="true"/>
+        </Http>
+        -->
+    </Appenders>
+
+    <Loggers>
+        <!-- Root Logger: Default logging settings -->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+            <!-- Uncomment if using remote logging -->
+            <!-- <AppenderRef ref="HttpLogger"/> -->
+        </Root>
+
+        <!-- Example of a specific logger configuration -->
+        <!-- Uncomment and customize if you want different settings for specific packages -->
+        <!--
+        <Logger name="com.example.bestpractice" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+        -->
+    </Loggers>
+</Configuration>
