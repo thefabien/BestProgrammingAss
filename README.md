@@ -1,3 +1,32 @@
+LAST ASSIGNMENT:
+Q1:What is Logging?
+-------------------------
+Logging refers to the process of recording or storing information 
+or messages that help in understanding the behavior and execution
+of a program. It is a way to track the flow of the program
+and identify any issues or bugs.
+Q2:Why Logging is Important
+-------------------------------
+Logging is essential to understand the behaviour of the application and to debug
+unexpected issues or for simply tracking events. In the production environment, we can't
+debug issues without proper log files as they become the only source of information to
+debug some intermittent or unexpected errors.
+Q3:understanding Logging Levels
+-----------------------------------
+Logging level                   Purpose                          
+
+-DEBUG                          -Provides detailed
+                                 information foR diagnosing
+                                 problems.
+
+-INFO                            -Provides general information
+                                  about application operation.
+
+-WARN                             -Reports errors affecting functionality.
+
+
+-FATAL (or CRITICAL                -Represents severe errors leading to termination.
+____________________________________________________________________________________________________________________________________________
 # BestPractice Web Application
 
 This is a simple web application built using Java Servlets, JSP, and Hibernate for database management.
